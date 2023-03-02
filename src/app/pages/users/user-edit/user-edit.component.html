@@ -1,0 +1,31 @@
+<form [formGroup]="form">
+  <h3>Edit Customer</h3>
+  <div class="mb-3"> 
+    <label>Customer Name</label>
+    <input id="name" type="text" formControlName="name" class="form-control" placeholder="Full Name"> 
+  </div>
+
+  <div class="mb-3">
+  <label>Account Number</label>
+  <input id="number" type="number" formControlName="number" class="form-control" placeholder="Number">
+  </div>
+
+  <div class="mb-3">
+    <label for="name">Account Type</label>
+    <select id="type" class="form-control form-select form-select-1g mb-3" formControlName="type" placeholder="">
+      <option value="Savings" selected>Savings</option>
+      <option value="Current" >Current</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label>Balance</label>  
+    <input id="bal" type="number" formControlName="bal" class="form-control" placeholder="Balance"> 
+  </div>
+
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary" (click)="updateCustomer()" [disabled]="form.invalid">Create</button>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <button type="reset" class="btn btn-danger" >Reset</button> 
+  </div>
+</form>

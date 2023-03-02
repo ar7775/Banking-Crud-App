@@ -1,0 +1,35 @@
+<input
+  [formControl]="searcher"
+  type="text"
+  placeholder="Search Customer"
+  class="form-control mt-2"
+/>
+&nbsp;
+<div class="customer" *ngIf="customer$ | async as customer">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Customer Name</th>
+      <th scope="col">Account Number</th>
+      <th scope="col">Account Type</th>
+      <th scope="col">Balance</th>
+      <th scope="col">Action </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customer; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ customer.name}}</td>
+      <td>{{ customer.number }}</td>
+      <td>{{ customer.type }}</td>
+      <td>{{ customer.bal }}</td>
+      <td>
+      <span (click)="deleteCustomer(customer)" class="btn btn-danger">Delete</span> &nbsp; 
+      <span (click)="editCustomer(customer)" class="btn btn-primary">Edit </span>
+      </td>
+    </tr>
+</tbody>
+</table>
+</div>
+<button class="btn btn-primary" (click)="_router.navigate(['users/add'])">Add Customer</button>
