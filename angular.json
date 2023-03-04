@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "scCrud": {
+    "banking-crud": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "scCrud:build:production"
+              "browserTarget": "banking-crud:build:production"
             },
             "development": {
-              "browserTarget": "scCrud:build:development"
+              "browserTarget": "banking-crud:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "scCrud:build"
+            "browserTarget": "banking-crud:build"
           }
         },
         "test": {
@@ -103,9 +103,9 @@
           "options": {
             "prerender": false,
             "ssr": false,
-            "browserTarget": "scCrud:build:production",
-            "firebaseProject": "crudv15",
-            "firebaseHostingSite": "crudv15"
+            "browserTarget": "banking-crud:build:production",
+            "firebaseProject": "banking-crud",
+            "firebaseHostingSite": "banking-crud"
           }
         }
       }
