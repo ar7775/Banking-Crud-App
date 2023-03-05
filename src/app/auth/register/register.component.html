@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row mt-5">
+      <div class="col-12 d-flex justify-content-center">
+        <div class="col-4">
+          <div class="card shadow">
+            <div class="card-body">
+              <div class="mb-3">
+                <h4 class="text-dark text-muted">Register</h4>
+              </div>
+              <div class="mb-3">
+                <form>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="name" [(ngModel)]="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password"  name="password" [(ngModel)]="password">
+                  </div>
+                  <br>
+                  <button type="button" class="btn btn-info" (click)="register()">Register</button>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <a href="/auth/login" style="text-decoration: none;">Already have account ? <span class="text-danger">Login</span></a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

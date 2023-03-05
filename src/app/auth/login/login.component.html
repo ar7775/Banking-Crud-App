@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div class="container mt-4">
+  <div class="container-fluid">
+      <div class="row mt-5">
+        <div class="col-12 d-flex justify-content-center">
+          <div class="col-4">
+            <div class="card shadow ">
+              <div class="card-body">
+                <div class="mb-3">
+                  <h4 class="text-dark text-muted">Login</h4>
+                </div>
+                <div class="mb-3">
+                  <form>
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="name" [(ngModel)]="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" id="password"  name="password" [(ngModel)]="password">
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-info" (click)="login()">Login</button>
+                    <br>
+                    <div class="row">
+                      <div class="col-6">
+                        <a href="/auth/register" style="text-decoration: none;">Need Account ?</a>
+                      </div>
+                      <div class="col-6">
+                        <a href="/auth/forgot-password" class="text-dark" style="text-decoration: none;">Forgot Password ?</a>
+                      </div>
+                    </div>
+                    <div class="row mt-2">
+                      <a (click)="signInWithGoogle()" style="text-decoration: none;">
+                        <div class="card shadow text-center">
+                          <div class="card-body">
+                            <img src="../../../assets/icons8-google-48.png" alt="" height="24px" width="24px"> Sign in with Google
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
